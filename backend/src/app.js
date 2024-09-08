@@ -16,5 +16,10 @@ app.use(cookieParser());
 
 
 import userRouter from './routes/user.routes.js';
-
 app.use('/api/auth', userRouter);
+
+import courseRouter from './routes/course.routes.js';
+app.use('/api/courses', courseRouter);
+
+import adminRouter from './routes/admin.routes.js';
+app.use('/api/admin', adminRouter);
