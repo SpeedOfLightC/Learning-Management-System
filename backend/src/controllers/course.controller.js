@@ -56,7 +56,7 @@ const fetchLecture = asyncHandler(async (req, res) => {
       .json(new ApiResponse(200, { lecture }, "Lectures fetched successfully"));
   }
 
-  if (!user.subscription.includes(req.params.id)) {
+  if (!user.subscription.includes(lecture.course)) {
     throw new ApiError(401, "You are not subscribed to this course");
   }
 
