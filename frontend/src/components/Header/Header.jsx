@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 
 function Header() {
     return (
-        <header className='flex place-content-around'>
-            <div className=''>Header</div>
+        <header className='flex justify-between items-center p-5 bg-white shadow-md relative'>
+            <div className='text-xl font-semibold text-purple-600 md:text-lg'>Header</div>
 
-            <div className=''>
-                <Link to={'/'}>Home</Link>
-                <Link to={'/courses'}>Courses</Link>
-                <Link to={'/about'}>About</Link>
-                <Link to={'/account'}>Account</Link>
+            <div className='flex gap-8 md:gap-2'>
+                <Link to={'/'} className='no-underline duration-300 hover:text-orange-400'>Home</Link>
+                <Link to={'/courses'} className='no-underline duration-300 hover:text-orange-400'>Courses</Link>
+                <Link to={'/about'} className='no-underline duration-300 hover:text-orange-400'>About</Link>
+                <Link to={'/account'} className='no-underline duration-300 hover:text-orange-400'>Account</Link>
             </div>
         </header>
     )
